@@ -724,7 +724,7 @@ int mnt_table_parse_stream(struct libmnt_table *tb, FILE *f, const char *filenam
 	int rc = -1;
 	int flags = 0;
 	pid_t tid = -1;
-	struct libmnt_parser pa = { .line = 0 };
+	struct libmnt_parser pa = { .line = 0, .sysroot_rc = 0, .sysroot = NULL };
 
 	assert(tb);
 	assert(f);
